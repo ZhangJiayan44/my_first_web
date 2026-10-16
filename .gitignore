@@ -1,0 +1,31 @@
+# .gitignore —— 写给 Git 的"黑名单"
+# 规则：一行一条；# 开头是注释；folder/ 表示整个文件夹；* 是通配符
+# 效果：被匹配的文件 git status 不提示、git add . 也不会加进去
+
+# ---- 操作系统生成的垃圾文件 ----
+.DS_Store          # macOS 的目录缓存
+Thumbs.db          # Windows 的缩略图缓存
+desktop.ini
+
+# ---- 编辑器个人配置（每个人不一样，不该共享）----
+.vscode/
+.idea/
+*.swp
+*~
+
+# ---- 依赖包：体积大，靠 package.json / requirements.txt 就能重装 ----
+node_modules/
+venv/
+__pycache__/
+*.pyc
+
+# ---- 构建产物：能重新生成 ----
+dist/
+build/
+*.log
+
+# ---- 敏感信息：密码、密钥，绝对不进版本库 ----
+.env
+.env.local
+*.key
+*.pem

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的第一个网站</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <span class="brand">my_first_web</span>
+    <nav>
+      <a href="#about">关于</a>
+      <a href="#learn">学习清单</a>
+      <a href="https://github.com/ZhangJiayan44" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="badge">git + github 实操</p>
+      <h1>你好，这是我推上线的<br><span class="hl">第一个网站</span></h1>
+      <p class="sub">从本地文件夹 → Git 仓库 → GitHub → 公网能打开，四步走完。</p>
+      <button id="btn" class="btn">点我</button>
+      <p id="out" class="out"></p>
+    </section>
+
+    <section id="about" class="card">
+      <h2>这个网站是什么</h2>
+      <p>一个纯静态页面，没有后端、没有数据库、没有依赖。它存在的唯一目的是让我把
+        <strong>版本管理</strong> 这条路走通一遍。</p>
+    </section>
+
+    <section id="learn" class="card">
+      <h2>学习清单</h2>
+      <ul id="checklist" class="checklist"></ul>
+      <p id="progress" class="hint"></p>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> ZhangJiayan44 · 用 git push 部署</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
